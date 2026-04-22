@@ -310,70 +310,27 @@
       </div>
     </div>
 
-    <form class="booking-form" onsubmit="handleBooking(event)">
-      <h3 class="form-title">Request your appointment</h3>
-      <p class="form-subtitle">We'll reach out within 15 minutes to confirm your booking.</p>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" required placeholder="Sarah">
-        </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" required placeholder="Ahmed">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Phone (UAE)</label>
-          <input type="tel" required placeholder="+971 50 123 4567">
-        </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" required placeholder="you@email.com">
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label>Preferred Location</label>
-          <select required>
-            <option value="">Select clinic</option>
-            <option>Downtown Dubai</option>
-            <option>Jumeirah Beach</option>
-            <option>Dubai Marina</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Service</label>
-          <select required>
-            <option value="">Select service</option>
-            <option>General Check-up</option>
-            <option>Cosmetic Dentistry</option>
-            <option>Dental Implants</option>
-            <option>Teeth Whitening</option>
-            <option>Invisalign</option>
-            <option>Root Canal</option>
-            <option>Paediatric Dentistry</option>
-            <option>Emergency</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>Preferred Date</label>
-        <input type="date" required>
-      </div>
-
-      <div class="form-group">
-        <label>Notes (optional)</label>
-        <textarea rows="3" placeholder="Any concerns, preferences, or questions?"></textarea>
-      </div>
-
-      <button type="submit" class="form-submit">Request Appointment →</button>
-    </form>
+    <!-- GHL Native Form -->
+    <div class="booking-form" style="padding: 0; overflow: hidden; min-height: 640px;">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/K88iOUIXmZRkyY6yJb8v"
+        style="width:100%;height:640px;border:none;border-radius:24px"
+        id="inline-K88iOUIXmZRkyY6yJb8v"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Form 0"
+        data-height="610"
+        data-layout-iframe-id="inline-K88iOUIXmZRkyY6yJb8v"
+        data-form-id="K88iOUIXmZRkyY6yJb8v"
+        title="Appointment Booking Form">
+      </iframe>
+      <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+    </div>
   </div>
 </section>
 
