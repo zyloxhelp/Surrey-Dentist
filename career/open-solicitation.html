@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Application — Careers at Surrey Dental Studio Dubai</title>
+<meta name="description" content="Join our team of dental professionals at Surrey Dental Studio. Submit an open application and let's discuss how you can be part of Dubai's leading dental clinic.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+.career-detail-section { padding: 120px 48px; background: var(--bg); }
+
+.career-detail-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.career-content {}
+
+.career-tag-line {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.career-detail-tag {
+  padding: 8px 18px;
+  background: var(--bg-cream);
+  border-radius: 100px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.career-detail-tag.highlight {
+  background: var(--sage);
+  color: var(--bg);
+}
+
+.career-content h2 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  margin: 48px 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.career-content h2 em { color: var(--sage); font-style: italic; }
+.career-content h2:first-of-type { margin-top: 0; }
+
+.career-content p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.career-content ul {
+  margin: 16px 0 24px;
+  padding-left: 24px;
+}
+
+.career-content li {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Apply form sidebar */
+.apply-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.apply-card {
+  background: var(--bg-white);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.08);
+}
+
+.apply-card h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.apply-card > p {
+  font-size: 14px;
+  color: var(--ink-mute);
+  margin-bottom: 28px;
+}
+
+.apply-form .form-group { margin-bottom: 18px; }
+
+.apply-form label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  font-family: var(--sans);
+  font-size: 14px;
+  background: var(--bg-white);
+  color: var(--ink);
+  transition: all 0.3s;
+}
+
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+  outline: none;
+  border-color: var(--sage);
+  box-shadow: 0 0 0 4px rgba(61, 74, 60, 0.08);
+}
+
+.file-upload {
+  display: block;
+  padding: 14px 16px;
+  border: 1.5px dashed var(--line-strong);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-mute);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.file-upload:hover {
+  border-color: var(--sage);
+  background: var(--bg-cream);
+}
+
+.apply-submit {
+  width: 100%;
+  padding: 16px;
+  background: var(--sage);
+  color: var(--bg);
+  border: none;
+  border-radius: 100px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.3s;
+}
+
+.apply-submit:hover { background: var(--ink); transform: translateY(-2px); }
+
+@media (max-width: 1024px) {
+  .career-detail-grid { grid-template-columns: 1fr; gap: 40px; }
+  .apply-sidebar { position: static; }
+  .career-detail-section { padding: 80px 24px; }
+  .apply-card { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="logo"><div class="logo-mark">✦</div>Surrey Dental</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html" class="active">About Us</a></li>
+    <li><a href="../service.html">Services</a></li>
+    <li><a href="../blogs.html">Blog</a></li>
+    <li><a href="../contact-us.html">Contact</a></li>
+  </ul>
+  <a href="../contact-us.html" class="nav-cta">Book Appointment →</a>
+  <button class="mobile-toggle"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-image">
+    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=1600&q=80" alt="Careers at Surrey Dental">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="../about.html">Careers</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Open Application</span>
+      </div>
+      <h1 class="page-hero-title">Open <em style="color: var(--gold); font-style: italic;">application</em></h1>
+    </div>
+  </div>
+</section>
+
+<section class="career-detail-section">
+  <div class="career-detail-grid">
+
+    <!-- MAIN -->
+    <div class="career-content reveal">
+      <div class="career-tag-line">
+        <span class="career-detail-tag highlight">Always hiring</span>
+        <span class="career-detail-tag">📍 All Dubai locations</span>
+        <span class="career-detail-tag">⏱ Full-time / Part-time</span>
+        <span class="career-detail-tag">🎓 All experience levels</span>
+      </div>
+
+      <h2>Don't see the perfect role? <em>Apply anyway.</em></h2>
+      <p>At Surrey Dental Studio, we believe in building a team of exceptional people — not just filling vacancies. If you're passionate about dentistry, patient care, or making our clinic run smoother, we want to hear from you, even if there's no specific job posted right now.</p>
+      <p>We hire across all roles — clinical, administrative, marketing, technology, and patient experience. Our most successful team members didn't always start in their final role. We invest in growth, and we love discovering hidden talent.</p>
+
+      <h2>Who we're <em>always</em> looking for</h2>
+      <ul>
+        <li><strong>Dental Specialists</strong> — implantologists, orthodontists, periodontists, prosthodontists</li>
+        <li><strong>General Dentists</strong> — DHA-licensed with 3+ years of UAE experience</li>
+        <li><strong>Dental Hygienists & Therapists</strong> — passionate about preventive care</li>
+        <li><strong>Dental Nurses & Assistants</strong> — strong four-handed dentistry skills</li>
+        <li><strong>Front Desk & Patient Experience</strong> — multilingual, empathetic, organised</li>
+        <li><strong>Practice Managers</strong> — leadership and operational excellence</li>
+        <li><strong>Marketing & Content</strong> — digital natives who love healthcare storytelling</li>
+        <li><strong>Lab Technicians</strong> — CAD/CAM and ceramics experience preferred</li>
+      </ul>
+
+      <h2>What makes Surrey Dental <em>different</em></h2>
+      <p>Working at Surrey Dental isn't just a job — it's a commitment to excellence in a workplace that genuinely cares about your growth and wellbeing.</p>
+      <ul>
+        <li><strong>Competitive salary</strong> — among the highest in Dubai's dental sector</li>
+        <li><strong>Continuing education budget</strong> — AED 10,000 annual training stipend</li>
+        <li><strong>International conference attendance</strong> — paid trips to global dental events</li>
+        <li><strong>Comprehensive medical insurance</strong> — for you and your dependents</li>
+        <li><strong>Performance bonuses</strong> — quarterly performance-linked rewards</li>
+        <li><strong>Modern equipment</strong> — latest CBCT, iTero, microscopes, and digital workflow</li>
+        <li><strong>Collaborative culture</strong> — flat hierarchy, direct access to leadership</li>
+        <li><strong>Visa & relocation support</strong> — for international hires</li>
+      </ul>
+
+      <h2>Our <em>hiring process</em></h2>
+      <p>We believe in respecting your time. Our process is designed to be efficient and transparent:</p>
+      <ul>
+        <li><strong>Application review</strong> — within 5 business days</li>
+        <li><strong>Initial conversation</strong> — 30-minute call with our HR team</li>
+        <li><strong>Technical/clinical interview</strong> — with the relevant department head</li>
+        <li><strong>Practical assessment</strong> — for clinical roles, a half-day clinical observation</li>
+        <li><strong>Final discussion</strong> — meet the founding team and tour the clinic</li>
+        <li><strong>Offer</strong> — within 7 days of final round</li>
+      </ul>
+
+      <h2>Equal opportunity <em>employer</em></h2>
+      <p>Surrey Dental Studio is proud to be an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive workplace where every team member can thrive — regardless of background, nationality, religion, gender identity, or experience level.</p>
+
+      <p>Submit your CV through the form, and our team will get back to you within 5 business days. If we don't have a suitable role right now, we'll keep your details on file and contact you when something opens up.</p>
+    </div>
+
+    <!-- APPLY FORM SIDEBAR -->
+    <aside class="apply-sidebar reveal">
+      <div class="apply-card">
+        <h3>Submit your application</h3>
+        <p>Tell us about yourself and we'll be in touch within 5 days.</p>
+
+        <form class="apply-form" onsubmit="handleBooking(event)">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" required placeholder="Sarah Ahmed">
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" required placeholder="you@email.com">
+          </div>
+
+          <div class="form-group">
+            <label>Phone (UAE)</label>
+            <input type="tel" required placeholder="+971 50 123 4567">
+          </div>
+
+          <div class="form-group">
+            <label>Role of interest</label>
+            <select required>
+              <option value="">Select role</option>
+              <option>Dental Specialist</option>
+              <option>General Dentist</option>
+              <option>Dental Hygienist</option>
+              <option>Dental Nurse</option>
+              <option>Front Desk</option>
+              <option>Practice Manager</option>
+              <option>Marketing</option>
+              <option>Lab Technician</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Years of experience</label>
+            <select required>
+              <option value="">Select</option>
+              <option>0–2 years</option>
+              <option>3–5 years</option>
+              <option>6–10 years</option>
+              <option>10+ years</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Tell us about yourself</label>
+            <textarea rows="4" placeholder="What are you looking for? What's your story?"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Upload CV</label>
+            <label class="file-upload">📎 Choose file (PDF, DOC, max 5MB)</label>
+            <input type="file" style="display: none;">
+          </div>
+
+          <button type="submit" class="apply-submit">Submit Application →</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-mark">✦</div>Surrey Dental</a><p class="footer-tagline">Bringing out the <em>best</em> in your smile</p><div class="footer-socials"><a href="#" class="footer-social">IG</a><a href="#" class="footer-social">FB</a><a href="#" class="footer-social">TT</a><a href="#" class="footer-social">in</a></div></div>
+    <div class="footer-col"><h4>Main Pages</h4><ul><li><a href="../index.html">Homepage</a></li><li><a href="../about.html">About Us</a></li><li><a href="../service.html">Services</a></li><li><a href="../blogs.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Other</h4><ul><li><a href="../contact-us.html">Contact Us</a></li><li><a href="open-solicitation.html">Careers</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+97145550000">+971 4 555 0000</a></li><li><a href="mailto:hello@surreydental.ae">hello@surreydental.ae</a></li><li><a href="https://wa.me/971505550000">WhatsApp</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Surrey Dental Studio. DHA License #SDS-2008-DXB</span><span>Privacy · Terms</span></div>
+</footer>
+
+<a href="https://wa.me/971505550000" class="whatsapp-float" target="_blank"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

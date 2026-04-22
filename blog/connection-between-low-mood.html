@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Connection Between Low Mood & Oral Health — Surrey Dental Studio</title>
+<meta name="description" content="Discover how dental health impacts your mental wellbeing and the surprising link between low mood and oral hygiene.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+.blog-post-section { padding: 120px 48px; background: var(--bg); }
+
+.blog-post-wrap { max-width: 860px; margin: 0 auto; }
+
+.blog-post-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-bottom: 24px;
+}
+
+.blog-post-cat {
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+.blog-post-title {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: 32px;
+}
+
+.blog-post-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 48px;
+}
+
+.blog-author-avatar {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--sage), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  font-family: var(--serif);
+  font-size: 18px;
+}
+
+.blog-author-info p:first-child { font-weight: 500; font-size: 15px; }
+.blog-author-info p:last-child { font-size: 13px; color: var(--ink-mute); }
+
+.blog-cover-img {
+  height: 480px;
+  border-radius: 28px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.blog-cover-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.blog-content p {
+  font-size: 18px;
+  color: var(--ink);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.blog-content p.lead {
+  font-size: 22px;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 32px;
+  line-height: 1.5;
+  border-left: 3px solid var(--sage);
+  padding-left: 24px;
+}
+
+.blog-content h2 {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  margin: 48px 0 20px;
+  letter-spacing: -0.01em;
+}
+
+.blog-content h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  margin: 32px 0 16px;
+}
+
+.blog-content ul, .blog-content ol {
+  margin: 20px 0 24px;
+  padding-left: 24px;
+}
+
+.blog-content li {
+  font-size: 17px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.blog-content blockquote {
+  background: var(--bg-cream);
+  padding: 32px;
+  border-radius: 20px;
+  margin: 32px 0;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.blog-content img {
+  border-radius: 20px;
+  margin: 32px 0;
+}
+
+.blog-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 48px 0;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.blog-tag {
+  padding: 8px 18px;
+  background: var(--bg-cream);
+  border-radius: 100px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.blog-share {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.blog-share span { font-size: 13px; color: var(--ink-mute); }
+
+.share-btn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+
+.share-btn:hover { transform: translateY(-3px); }
+
+/* Related blogs */
+.related-blogs-section {
+  padding: 80px 48px 120px;
+  background: var(--bg-cream);
+}
+
+.related-blogs-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.related-blog-card {
+  background: var(--bg-white);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.related-blog-card:hover { transform: translateY(-6px); }
+
+.related-blog-card .blog-img {
+  height: 220px;
+  overflow: hidden;
+}
+
+.related-blog-card .blog-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.related-blog-card .blog-body { padding: 24px; }
+
+.related-blog-card h4 {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 1024px) {
+  .blog-post-section { padding: 80px 24px; }
+  .blog-cover-img { height: 320px; }
+  .related-blogs-grid { grid-template-columns: repeat(2, 1fr); }
+  .related-blogs-section { padding: 60px 24px 80px; }
+}
+
+@media (max-width: 640px) {
+  .related-blogs-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="logo"><div class="logo-mark">✦</div>Surrey Dental</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About Us</a></li>
+    <li><a href="../service.html">Services</a></li>
+    <li><a href="../blogs.html" class="active">Blog</a></li>
+    <li><a href="../contact-us.html">Contact</a></li>
+  </ul>
+  <a href="../contact-us.html" class="nav-cta">Book Appointment →</a>
+  <button class="mobile-toggle"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="blog-post-section">
+  <div class="blog-post-wrap reveal">
+    <div class="breadcrumb" style="background: var(--bg-cream); color: var(--ink); margin-bottom: 24px;">
+      <a href="../index.html">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../blogs.html">Blog</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Article</span>
+    </div>
+
+    <div class="blog-post-meta">
+      <span class="blog-post-cat">Dental Care</span>
+      <span>December 1, 2025</span>
+      <span>· 8 min read</span>
+    </div>
+
+    <h1 class="blog-post-title">The surprising connection between <em style="color: var(--sage); font-style: italic;">low mood</em> and oral health</h1>
+
+    <div class="blog-post-author">
+      <div class="blog-author-avatar">AA</div>
+      <div class="blog-author-info">
+        <p>Dr. Amira Al-Hashmi</p>
+        <p>Founder & Chief Implantologist</p>
+      </div>
+    </div>
+
+    <div class="blog-cover-img">
+      <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1200&q=80" alt="Mental health and dental care">
+    </div>
+
+    <div class="blog-content">
+      <p class="lead">New research is uncovering a fascinating two-way street between your dental health and mental wellbeing — and the implications for how we approach both are profound.</p>
+
+      <p>For years, dentistry and mental health were treated as completely separate fields. But emerging studies are revealing what many practitioners have suspected for a long time: the state of your mouth can dramatically influence how you feel emotionally — and vice versa.</p>
+
+      <h2>The body-mind dental connection</h2>
+      <p>When patients walk into our Dubai clinic with chronic dental pain, untreated cavities, or visible smile imperfections, we often see something else as well: signs of stress, anxiety, or low mood. This isn't a coincidence. Recent studies from the Journal of Dental Research show that people with poor oral health are nearly twice as likely to experience symptoms of depression compared to those with healthy mouths.</p>
+
+      <blockquote>"A healthy smile isn't just about appearance. It's a foundation for confidence, social connection, and overall life satisfaction."</blockquote>
+
+      <h2>Three ways oral health affects mental wellbeing</h2>
+
+      <h3>1. Chronic inflammation impacts brain chemistry</h3>
+      <p>Gum disease causes systemic inflammation, which research has linked to depression and anxiety. The same inflammatory markers found in chronic periodontitis appear elevated in people experiencing major depressive episodes. Treating the gum disease often results in measurable improvements in mood.</p>
+
+      <h3>2. Smile confidence shapes social behaviour</h3>
+      <p>People who feel self-conscious about their teeth often avoid smiling, laughing, and social situations altogether. This withdrawal compounds over time, leading to isolation — a major risk factor for depression. Cosmetic dental treatments at our Dubai clinic frequently report patients telling us they feel "lighter" or "more themselves" within days of treatment.</p>
+
+      <h3>3. Sleep quality and dental health</h3>
+      <p>Bruxism (teeth grinding), TMJ disorders, and sleep apnoea — all dental-related conditions — disrupt sleep quality. Poor sleep is one of the strongest predictors of low mood and emotional dysregulation.</p>
+
+      <h2>What the research is telling us</h2>
+      <p>A landmark 2023 study from King's College London followed 8,000 adults over 5 years and found:</p>
+      <ul>
+        <li>People with untreated dental issues had 60% higher rates of depression</li>
+        <li>Cosmetic dental treatment improved self-reported life satisfaction by an average of 32%</li>
+        <li>Treating gum disease reduced anxiety symptoms in 71% of participants</li>
+        <li>Children with healthy teeth performed 18% better on emotional regulation tests</li>
+      </ul>
+
+      <h2>What you can do</h2>
+      <p>If you've been struggling with low mood — and have been putting off a dental visit — consider that the two might be connected. Even simple steps can make a meaningful difference:</p>
+
+      <ol>
+        <li><strong>Schedule a check-up</strong> — addressing untreated issues removes a source of chronic stress</li>
+        <li><strong>Treat gum disease promptly</strong> — reducing inflammation can improve mood</li>
+        <li><strong>Consider cosmetic options</strong> — if smile confidence is holding you back, there are gentle, modern solutions</li>
+        <li><strong>Address bruxism</strong> — a custom night guard can dramatically improve sleep quality</li>
+        <li><strong>Talk to your dentist</strong> — at Surrey Dental, we always ask about how patients are feeling, not just their teeth</li>
+      </ol>
+
+      <h2>The bottom line</h2>
+      <p>Your mouth and mind are connected in ways modern science is only beginning to understand. Taking care of your oral health isn't just about preventing cavities — it's an investment in your mental wellbeing, your confidence, and your overall quality of life.</p>
+
+      <p>If you'd like to discuss your oral health in a calm, judgment-free environment, our specialists at Surrey Dental Studio Dubai are here to help. Book a complimentary consultation at any of our three Dubai locations.</p>
+    </div>
+
+    <div class="blog-tags">
+      <span class="blog-tag">#OralHealth</span>
+      <span class="blog-tag">#MentalWellbeing</span>
+      <span class="blog-tag">#DubaiDentist</span>
+      <span class="blog-tag">#SurreyDental</span>
+    </div>
+
+    <div class="blog-share">
+      <span>Share this article:</span>
+      <a href="#" class="share-btn">f</a>
+      <a href="#" class="share-btn">t</a>
+      <a href="#" class="share-btn">in</a>
+      <a href="#" class="share-btn">📋</a>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="related-blogs-section">
+  <div class="section-header-center reveal">
+    <div class="section-eyebrow">Related Articles</div>
+    <h2 class="section-title">More from our <em>blog</em></h2>
+  </div>
+
+  <div class="related-blogs-grid reveal">
+    <a href="vegan-food-oral-health.html" class="related-blog-card">
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1578496480157-697fc14d2e55?w=600&q=80" alt=""></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-category">Nutrition</span><span>November 28, 2025</span></div>
+        <h4>Nourishing smiles: vegan food and oral health</h4>
+      </div>
+    </a>
+    <a href="dental-insight-tips.html" class="related-blog-card">
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?w=600&q=80" alt=""></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-category">Tips</span><span>November 20, 2025</span></div>
+        <h4>Get dental insights, medical tips, and more</h4>
+      </div>
+    </a>
+    <a href="connection-between-low-mood.html" class="related-blog-card">
+      <div class="blog-img"><img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&q=80" alt=""></div>
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-category">Cosmetic</span><span>November 15, 2025</span></div>
+        <h4>Everything you need to know about teeth whitening</h4>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><a href="../index.html" class="logo"><div class="logo-mark">✦</div>Surrey Dental</a><p class="footer-tagline">Bringing out the <em>best</em> in your smile</p><div class="footer-socials"><a href="#" class="footer-social">IG</a><a href="#" class="footer-social">FB</a><a href="#" class="footer-social">TT</a><a href="#" class="footer-social">in</a></div></div>
+    <div class="footer-col"><h4>Main Pages</h4><ul><li><a href="../index.html">Homepage</a></li><li><a href="../about.html">About Us</a></li><li><a href="../service.html">Services</a></li><li><a href="../blogs.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Other</h4><ul><li><a href="../contact-us.html">Contact Us</a></li><li><a href="../career/open-solicitation.html">Careers</a></li><li><a href="../privacy-policy.html">Privacy Policy</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+97145550000">+971 4 555 0000</a></li><li><a href="mailto:hello@surreydental.ae">hello@surreydental.ae</a></li><li><a href="https://wa.me/971505550000">WhatsApp</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Surrey Dental Studio. DHA License #SDS-2008-DXB</span><span>Privacy · Terms</span></div>
+</footer>
+
+<a href="https://wa.me/971505550000" class="whatsapp-float" target="_blank"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
