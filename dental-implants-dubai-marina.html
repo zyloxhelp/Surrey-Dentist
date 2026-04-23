@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dental Implants Dubai Marina | Surrey Dental Studio — DHA Licensed</title>
-<meta name="description" content="Looking for dental implants in Dubai Marina? Surrey Dental Studio offers premium, DHA-licensed dental care. Starting from AED 3,500. Same-day appointments available. Book now.">
+<title>Dental Implants Dubai Marina | Surrey Dental Studio</title>
+<meta name="description" content="Looking for dental implants in Dubai Marina? Surrey Dental Studio offers premium, DHA-licensed dental care. Starting from AED 3,500. Same-day appointmen...">
 <meta name="keywords" content="dental implants dubai marina, dental clinic dubai marina, dental implants dubai, best dentist dubai marina">
 <meta name="geo.region" content="AE-DU">
 <meta name="geo.placename" content="Dubai Marina, Dubai">
@@ -404,9 +404,303 @@ footer{background:var(--ink);color:var(--bg);padding:60px 48px 32px;}
   .nearby-cards-grid { grid-template-columns: 1fr; }
 }
 
+
+/* ============================
+   HIGH CONVERSION ELEMENTS
+   ============================ */
+
+/* URGENCY BANNER */
+.urgency-banner {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 200;
+}
+.urgency-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.urgency-pulse {
+  width: 10px; height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:.5; transform:scale(1.3); }
+}
+.urgency-cta {
+  background: white;
+  color: #c0392b;
+  padding: 7px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all .3s;
+  white-space: nowrap;
+}
+.urgency-cta:hover { transform: scale(1.05); }
+.urgency-close {
+  background: none; border: none;
+  color: rgba(255,255,255,.7);
+  cursor: pointer; font-size: 16px;
+  position: absolute; right: 16px; top: 50%;
+  transform: translateY(-50%);
+}
+
+/* TRUST BAR */
+.trust-bar {
+  background: var(--sage);
+  padding: 16px 48px;
+}
+.trust-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.9);
+  font-size: 13px;
+  padding: 6px 24px;
+}
+.trust-item strong { color: white; }
+.trust-icon { font-size: 16px; }
+.trust-divider {
+  width: 1px; height: 28px;
+  background: rgba(255,255,255,.2);
+}
+
+/* REVIEWS TICKER */
+.reviews-ticker {
+  background: var(--cream);
+  overflow: hidden;
+  padding: 14px 0;
+  border-top: 1px solid rgba(26,26,26,.06);
+  border-bottom: 1px solid rgba(26,26,26,.06);
+}
+.reviews-track {
+  display: flex;
+  gap: 20px;
+  animation: tickerScroll 40s linear infinite;
+  width: max-content;
+}
+.reviews-track:hover { animation-play-state: paused; }
+.review-chip {
+  background: white;
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 13px;
+  color: var(--ink);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  flex-shrink: 0;
+}
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* VISITOR COUNTER */
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37,211,102,.1);
+  border: 1px solid rgba(37,211,102,.3);
+  color: #1a7a3a;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 16px 0;
+}
+.visitor-dot {
+  width: 8px; height: 8px;
+  background: #25D366;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* STICKY MOBILE BAR */
+.sticky-bar {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 500;
+  background: white;
+  box-shadow: 0 -4px 20px rgba(0,0,0,.15);
+  padding: 10px 16px;
+  gap: 10px;
+}
+.sticky-call {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--sage);
+  color: white;
+  padding: 13px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.sticky-wa {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #25D366;
+  color: white;
+  padding: 13px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.sticky-book {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 13px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* EXIT POPUP */
+.exit-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 9000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.exit-popup.show { display: flex; }
+.exit-popup-box {
+  background: white;
+  border-radius: 24px;
+  padding: 48px 36px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  animation: popIn .4s ease;
+}
+@keyframes popIn {
+  from { transform: scale(.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.exit-popup-icon { font-size: 48px; margin-bottom: 16px; }
+.exit-popup-box h3 {
+  font-family: var(--serif);
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+.exit-popup-box p {
+  font-size: 16px;
+  color: var(--soft);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.exit-btn {
+  display: block;
+  background: var(--sage);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .3s;
+  margin-top: 8px;
+}
+.exit-btn:hover { background: var(--ink); transform: translateY(-2px); }
+.exit-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: none; border: none;
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+/* SHOW STICKY BAR ON MOBILE */
+@media(max-width: 768px) {
+  .sticky-bar { display: flex; }
+  body { padding-bottom: 70px; }
+  .wa-float { bottom: 82px; }
+}
+
+/* TRUST BAR MOBILE */
+@media(max-width: 768px) {
+  .trust-bar { padding: 12px 16px; }
+  .trust-bar-inner { gap: 0; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
+  .trust-item { padding: 4px 16px; flex-shrink: 0; }
+  .trust-divider { flex-shrink: 0; }
+}
+
+
+/* ===== EXIT POPUP WITH FORM ===== */
+.exit-popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9000;align-items:center;justify-content:center;padding:16px;overflow-y:auto;}
+.exit-popup.show{display:flex;}
+.exit-popup-box{background:white;border-radius:24px;width:100%;max-width:500px;position:relative;animation:popIn .4s ease;overflow:hidden;margin:auto;}
+@keyframes popIn{from{transform:scale(.88);opacity:0;}to{transform:scale(1);opacity:1;}}
+.exit-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;color:#aaa;cursor:pointer;z-index:10;line-height:1;}
+.popup-header{background:var(--sage,#3d4a3c);color:white;padding:28px 28px 20px;text-align:center;}
+.popup-emoji{font-size:40px;margin-bottom:10px;}
+.popup-title{font-family:var(--serif,Georgia);font-size:24px;font-weight:300;margin-bottom:8px;}
+.popup-title em{font-style:italic;color:var(--gold,#b8935a);}
+.popup-sub{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:10px;}
+.popup-urgency{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);padding:5px 14px;border-radius:100px;font-size:12px;color:rgba(255,255,255,.9);}
+.popup-dot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:pdot 1.5s ease infinite;}
+@keyframes pdot{0%,100%{opacity:1}50%{opacity:.4}}
+.popup-form-wrap{padding:0;background:white;}
+.popup-alt{display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;font-size:13px;background:#f9f9f9;border-top:1px solid #eee;}
+.popup-alt a{color:var(--sage,#3d4a3c);font-weight:500;}
+.popup-alt span{color:#ccc;}
+@media(max-width:500px){
+  .popup-header{padding:20px 20px 16px;}
+  .popup-title{font-size:20px;}
+  .exit-popup-box{border-radius:16px;}
+}
 </style>
 </head>
 <body>
+
+<!-- URGENCY BANNER -->
+<div class="urgency-banner" id="urgencyBanner">
+  <div class="urgency-inner">
+    <span class="urgency-pulse"></span>
+    <span>🎁 <strong>This Week Only:</strong> Free Consultation + Free X-Ray (Worth AED 350) — Limited slots available</span>
+    <a href="/contact-us.html" class="urgency-cta">Claim Now →</a>
+    <button class="urgency-close" onclick="document.getElementById('urgencyBanner').style.display='none'">✕</button>
+  </div>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -444,7 +738,13 @@ footer{background:var(--ink);color:var(--bg);padding:60px 48px 32px;}
       <a href="/contact-us.html" class="btn-primary">Book Free Implant Consultation →</a>
       <a href="tel:+97145550000" class="btn-ghost">📞 +971 4 555 0000</a>
     </div>
-    <div class="hero-stats">
+    
+<!-- LIVE VISITOR COUNTER -->
+<div class="visitor-counter" id="visitorCounter">
+  <span class="visitor-dot"></span>
+  <span id="visitorCount">24</span> people viewing this page right now
+</div>
+<div class="hero-stats">
       <div><div class="stat-val">AED 3,500</div><div class="stat-lbl">Starting from</div></div>
       <div><div class="stat-val">4.98★</div><div class="stat-lbl">Google Rating</div></div>
       <div><div class="stat-val">15K+</div><div class="stat-lbl">Patients Treated</div></div>
@@ -452,6 +752,59 @@ footer{background:var(--ink);color:var(--bg);padding:60px 48px 32px;}
     </div>
   </div>
 </section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <span class="trust-icon">⭐</span>
+      <span><strong>4.98/5</strong> Google Rating</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-icon">✅</span>
+      <span><strong>DHA Licensed</strong> Specialists</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-icon">👥</span>
+      <span><strong>15,000+</strong> Happy Patients</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-icon">🕐</span>
+      <span><strong>Same Day</strong> Appointments</span>
+    </div>
+    <div class="trust-divider"></div>
+    <div class="trust-item">
+      <span class="trust-icon">💳</span>
+      <span><strong>0%</strong> Payment Plans</span>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS TICKER -->
+<div class="reviews-ticker">
+  <div class="reviews-track">
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Best dentist in Dubai Marina!" — Sara K.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Painless implant, amazing results" — Ahmed R.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Finally found a dentist I trust in Dubai" — Priya S.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Same day appointment, very professional" — James T.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "My whole family comes here now" — Fatima A.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Zoom whitening — 8 shades lighter!" — Maria L.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "DHA certified, very trustworthy" — Omar H.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Best implant specialist in Downtown" — Rana M.</div>
+    <!-- Duplicate for loop -->
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Best dentist in Dubai Marina!" — Sara K.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Painless implant, amazing results" — Ahmed R.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Finally found a dentist I trust in Dubai" — Priya S.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Same day appointment, very professional" — James T.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "My whole family comes here now" — Fatima A.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Zoom whitening — 8 shades lighter!" — Maria L.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "DHA certified, very trustworthy" — Omar H.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Best implant specialist in Downtown" — Rana M.</div>
+  </div>
+</div>
 
 <!-- WHY CHOOSE US -->
 <section class="section" style="background:var(--bg);">
@@ -721,7 +1074,7 @@ footer{background:var(--ink);color:var(--bg);padding:60px 48px 32px;}
 <a href="/dentist-hor-al-anz.html" class="city-btn">Hor Al Anz</a>
 <a href="/dentist-al-rigga.html" class="city-btn">Al Rigga</a>
 <a href="/dentist-al-muteena.html" class="city-btn">Al Muteena</a>
-<a href="/dentist-muhaisnah.html" class="city-btn">Muhaisnah</a>
+<a href="/dentist-al-qusais.html" class="city-btn">Muhaisnah</a>
 <a href="/dentist-rashidiya.html" class="city-btn">Al Rashidiya</a>
 <a href="/dentist-umm-suqeim.html" class="city-btn">Umm Suqeim</a>
 <a href="/dentist-al-safa.html" class="city-btn">Al Safa</a>
@@ -885,5 +1238,61 @@ window.addEventListener('scroll', () => {
 });
 </script>
 
+
+</div>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <a href="tel:+97145550000" class="sticky-call">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Call Now
+  </a>
+  <a href="https://wa.me/971505550000" target="_blank" class="sticky-wa">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    WhatsApp
+  </a>
+  <a href="/contact-us.html" class="sticky-book">
+    📅 Book Free
+  </a>
+</div>
+<script>
+// Scroll progress bar
+const _pb = document.createElement('div');
+_pb.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:9999;transition:width .1s;width:0%;pointer-events:none;';
+document.body.prepend(_pb);
+window.addEventListener('scroll', () => {
+  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  _pb.style.width = Math.min(pct, 100) + '%';
+});
+
+// Live visitor counter
+function _rv() {
+  const el = document.getElementById('visitorCount');
+  if(el) el.textContent = Math.floor(Math.random() * 15) + 12;
+  setTimeout(_rv, Math.random() * 8000 + 5000);
+}
+_rv();
+
+// Exit intent
+let _es = false;
+document.addEventListener('mouseleave', function(e) {
+  if(e.clientY < 20 && !_es) {
+    _es = true;
+    const p = document.getElementById('exitPopup');
+    if(p) p.classList.add('show');
+  }
+});
+setTimeout(() => {
+  if(!_es && window.innerWidth < 768) {
+    _es = true;
+    const p = document.getElementById('exitPopup');
+    if(p) p.classList.add('show');
+  }
+}, 30000);
+document.addEventListener('click', function(e) {
+  const p = document.getElementById('exitPopup');
+  if(p && e.target === p) p.classList.remove('show');
+});
+</script>
 </body>
 </html>

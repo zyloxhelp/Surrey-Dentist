@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surrey Dental Studio — Premium Dentistry in Dubai, UAE</title>
+<meta name="description" content="Dubai's premier dental clinic. DHA-licensed specialists for implants, whitening, Invisalign & more. Downtown Dubai, Jumeirah & Marina.">
+<meta name="keywords" content="dentist Dubai, dental clinic UAE, teeth whitening Dubai, dental implants Dubai, cosmetic dentistry UAE">
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai">
+<meta name="geo.position" content="25.2048;55.2708">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "Surrey Dental Studio",
+  "image": "https://surreyhomes.casa/images/logo.png",
+  "url": "https://surreyhomes.casa",
+  "telephone": "+971-4-555-0000",
+  "priceRange": "AED 200 - AED 5000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Boulevard Plaza Tower, Sheikh Mohammed bin Rashid Blvd",
+    "addressLocality": "Downtown Dubai",
+    "addressRegion": "Dubai",
+    "addressCountry": "AE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 25.2048,
+    "longitude": 55.2708
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+    "opens": "09:00", "closes": "21:00"
+  }],
+  "areaServed": ["Dubai","Abu Dhabi","Sharjah"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* ============ HOMEPAGE SPECIFIC ============ */
+
+/* HERO */
+.hero {
+  min-height: 92vh;
+  padding: 140px 48px 60px;
+  position: relative;
+}
+
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--sage);
+  margin-bottom: 28px;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s forwards;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 24px; height: 1px;
+  background: var(--sage);
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  margin-bottom: 32px;
+}
+
+.hero h1 .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: wordIn 0.9s ease-out forwards;
+}
+
+.hero h1 .word:nth-child(1) { animation-delay: 0.35s; }
+.hero h1 .word:nth-child(2) { animation-delay: 0.45s; }
+.hero h1 .word:nth-child(3) { animation-delay: 0.55s; }
+.hero h1 .word:nth-child(4) { animation-delay: 0.65s; }
+.hero h1 .word:nth-child(5) { animation-delay: 0.75s; }
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--sage);
+}
+
+@keyframes wordIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+.hero-sub {
+  font-size: 18px;
+  color: var(--ink-soft);
+  margin-bottom: 40px;
+  max-width: 480px;
+  opacity: 0;
+  animation: fadeUp 0.8s 1s forwards;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 64px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s 1.2s forwards;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  opacity: 0;
+  animation: fadeUp 0.8s 1.4s forwards;
+  flex-wrap: wrap;
+}
+
+.hero-stat-value {
+  font-family: var(--serif);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--sage);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hero-stat-label {
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin-top: 6px;
+}
+
+/* HERO IMAGE ROTATOR */
+.hero-rotating {
+  position: relative;
+  height: 600px;
+  border-radius: 32px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeUp 1s 0.5s forwards;
+}
+
+.hero-rotating img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.hero-rotating img.active { opacity: 1; }
+
+.hero-badges {
+  position: absolute;
+  bottom: 24px; left: 24px; right: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 2;
+}
+
+.hero-badge {
+  background: rgba(253, 251, 247, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 20px 24px;
+  border-radius: 20px;
+  flex: 1;
+  max-width: 180px;
+}
+
+.hero-badge-value {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.hero-badge-label {
+  font-size: 11px;
+  color: var(--ink-mute);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* EXCELLENCE TAGLINE */
+.tagline-section {
+  padding: 80px 48px;
+  text-align: center;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.tagline-text {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--ink);
+  max-width: 900px;
+  margin: 0 auto 16px;
+  letter-spacing: -0.01em;
+}
+
+.tagline-sub {
+  font-size: 14px;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+
+/* SERVICES */
+.services-section { background: var(--bg); }
+
+.services-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background: var(--bg-white);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.12);
+}
+
+.service-img {
+  height: 260px;
+  overflow: hidden;
+}
+
+.service-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.service-card:hover .service-img img { transform: scale(1.08); }
+
+.service-body {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.service-name {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.service-price {
+  font-size: 12px;
+  color: var(--ink-mute);
+  background: var(--bg-cream);
+  padding: 8px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* ABOUT SECTION */
+.about-section { background: var(--bg-cream); }
+
+.about-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.about-block {
+  background: var(--bg-white);
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-block-img {
+  height: 320px;
+  overflow: hidden;
+}
+
+.about-block-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s;
+}
+
+.about-block:hover .about-block-img img { transform: scale(1.05); }
+
+.about-block-body {
+  padding: 40px;
+}
+
+.about-block-tag {
+  font-size: 12px;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.about-block-title {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.about-block-text {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+/* WHAT WE OFFER */
+.offer-section {
+  background: var(--sage);
+  color: var(--bg);
+  padding: 120px 48px;
+}
+
+.offer-section .section-eyebrow { color: var(--gold); }
+.offer-section .section-eyebrow::before { background: var(--gold); }
+.offer-section .section-title { color: var(--bg); }
+
+.offer-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.offer-features {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin: 40px 0;
+}
+
+.offer-feature {
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.offer-feature:last-child { border-bottom: none; }
+
+.offer-feature p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+}
+
+.offer-image {
+  border-radius: 28px;
+  overflow: hidden;
+  height: 560px;
+  position: relative;
+}
+
+.offer-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.offer-stack {
+  position: absolute;
+  bottom: 24px; left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.offer-stack-item {
+  font-family: var(--serif);
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--bg);
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  opacity: 0.9;
+  padding: 12px 24px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  width: max-content;
+}
+
+/* DOCTORS */
+.doctors-section { background: var(--bg); }
+
+.doctors-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.doctor-card {
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--bg-white);
+  transition: all 0.4s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.12);
+}
+
+.doctor-img {
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+.doctor-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.doctor-card:hover .doctor-img img { transform: scale(1.05); }
+
+.doctor-experience {
+  position: absolute;
+  top: 20px; left: 20px;
+  background: rgba(253, 251, 247, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 12px;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.doctor-body {
+  padding: 28px 32px 32px;
+}
+
+.doctor-name {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.doctor-role {
+  font-size: 14px;
+  color: var(--ink-mute);
+}
+
+/* TESTIMONIALS */
+.testimonials-section { background: var(--bg-cream); }
+
+.testimonials-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial {
+  background: var(--bg-white);
+  border-radius: 28px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 0.4s;
+}
+
+.testimonial:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.12);
+}
+
+.testimonial-quote {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--ink);
+  font-weight: 400;
+  flex: 1;
+}
+
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial-avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--sage);
+}
+
+.testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.testimonial-name {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: var(--ink-mute);
+  margin-top: 2px;
+}
+
+/* BENEFITS */
+.benefits-section {
+  background: var(--bg);
+  padding: 120px 48px;
+}
+
+.benefits-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.benefits-image {
+  border-radius: 28px;
+  overflow: hidden;
+  height: 600px;
+}
+
+.benefits-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.benefits-text { }
+
+.benefits-text .section-title { margin-bottom: 28px; }
+
+.benefits-text p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* BLOG PREVIEW */
+.blog-section { background: var(--bg-cream); }
+
+.blog-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.blog-card {
+  background: var(--bg-white);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.1);
+}
+
+.blog-img {
+  height: 260px;
+  overflow: hidden;
+}
+
+.blog-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.blog-card:hover .blog-img img { transform: scale(1.05); }
+
+.blog-body { padding: 28px 32px 32px; }
+
+.blog-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--ink-mute);
+  margin-bottom: 12px;
+}
+
+.blog-category {
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.blog-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .hero { padding: 120px 24px 60px; min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-rotating { height: 480px; }
+  .services-grid, .doctors-grid, .testimonials-wrap, .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-grid, .offer-grid, .benefits-grid {
+    grid-template-columns: 1fr; gap: 40px;
+  }
+  .benefits-image { height: 400px; }
+  .offer-image { height: 400px; }
+  .tagline-section { padding: 60px 24px; }
+  .offer-section, .benefits-section { padding: 80px 24px; }
+}
+
+@media (max-width: 640px) {
+  .services-grid, .doctors-grid, .testimonials-wrap, .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-stats { gap: 24px; }
+  .hero-stat-value { font-size: 36px; }
+  .hero-rotating { height: 380px; }
+  .service-body, .doctor-body { padding: 24px; }
+  .service-body { flex-direction: column; align-items: flex-start; }
+  .testimonial { padding: 28px; }
+  .about-block-body { padding: 28px; }
+  .about-block-title { font-size: 26px; }
+  .offer-stack-item { font-size: 28px; padding: 8px 18px; }
+}
+
+/* ===== HIGH CONVERSION STYLES ===== */
+.urgency-banner{background:linear-gradient(135deg,#c0392b,#e74c3c);color:white;padding:12px 20px;text-align:center;position:relative;z-index:200;}
+.urgency-inner{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;font-size:14px;max-width:1200px;margin:0 auto;}
+.urgency-pulse{width:10px;height:10px;background:#fff;border-radius:50%;animation:upulse 1.5s infinite;flex-shrink:0;}
+@keyframes upulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+.urgency-cta{background:white;color:#c0392b;padding:7px 18px;border-radius:100px;font-size:13px;font-weight:600;white-space:nowrap;}
+.urgency-cta:hover{transform:scale(1.05);}
+.urgency-close{background:none;border:none;color:rgba(255,255,255,.7);cursor:pointer;font-size:16px;position:absolute;right:16px;top:50%;transform:translateY(-50%);}
+
+.trust-bar{background:var(--sage);padding:14px 48px;}
+.trust-bar-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.9);font-size:13px;padding:6px 24px;}
+.trust-item strong{color:white;}
+.trust-divider{width:1px;height:28px;background:rgba(255,255,255,.2);}
+
+.reviews-ticker{background:var(--bg-cream);overflow:hidden;padding:14px 0;border-top:1px solid rgba(26,26,26,.06);border-bottom:1px solid rgba(26,26,26,.06);}
+.reviews-track{display:flex;gap:20px;animation:rticker 40s linear infinite;width:max-content;}
+.reviews-track:hover{animation-play-state:paused;}
+.review-chip{background:white;padding:8px 20px;border-radius:100px;font-size:13px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.06);flex-shrink:0;}
+@keyframes rticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+
+
+.sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:500;background:white;box-shadow:0 -4px 20px rgba(0,0,0,.15);padding:10px 12px;gap:8px;}
+.sticky-call,.sticky-wa,.sticky-book{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:13px 8px;border-radius:10px;font-size:13px;font-weight:600;}
+.sticky-call{background:var(--sage);color:white;}
+.sticky-wa{background:#25D366;color:white;}
+.sticky-book{background:var(--gold);color:var(--ink);}
+
+@media(max-width:768px){
+  .sticky-bar{display:flex;}
+  body{padding-bottom:70px;}
+  .whatsapp-float,.wa-float{bottom:82px !important;}
+  .trust-bar{padding:10px 12px;}
+  .trust-bar-inner{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;}
+  .trust-item{flex-shrink:0;padding:4px 14px;}
+  .trust-divider{flex-shrink:0;}
+  .urgency-inner{font-size:12px;gap:10px;}
+}
+
+
+/* ===== EXIT POPUP WITH FORM ===== */
+.exit-popup{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9000;align-items:center;justify-content:center;padding:16px;overflow-y:auto;}
+.exit-popup.show{display:flex;}
+.exit-popup-box{background:white;border-radius:24px;width:100%;max-width:500px;position:relative;animation:popIn .4s ease;overflow:hidden;margin:auto;}
+@keyframes popIn{from{transform:scale(.88);opacity:0;}to{transform:scale(1);opacity:1;}}
+.exit-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;color:#aaa;cursor:pointer;z-index:10;line-height:1;}
+.popup-header{background:var(--sage,#3d4a3c);color:white;padding:28px 28px 20px;text-align:center;}
+.popup-emoji{font-size:40px;margin-bottom:10px;}
+.popup-title{font-family:var(--serif,Georgia);font-size:24px;font-weight:300;margin-bottom:8px;}
+.popup-title em{font-style:italic;color:var(--gold,#b8935a);}
+.popup-sub{font-size:14px;color:rgba(255,255,255,.85);margin-bottom:10px;}
+.popup-urgency{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);padding:5px 14px;border-radius:100px;font-size:12px;color:rgba(255,255,255,.9);}
+.popup-dot{width:7px;height:7px;background:#4ade80;border-radius:50%;animation:pdot 1.5s ease infinite;}
+@keyframes pdot{0%,100%{opacity:1}50%{opacity:.4}}
+.popup-form-wrap{padding:0;background:white;}
+.popup-alt{display:flex;align-items:center;justify-content:center;gap:12px;padding:14px;font-size:13px;background:#f9f9f9;border-top:1px solid #eee;}
+.popup-alt a{color:var(--sage,#3d4a3c);font-weight:500;}
+.popup-alt span{color:#ccc;}
+@media(max-width:500px){
+  .popup-header{padding:20px 20px 16px;}
+  .popup-title{font-size:20px;}
+  .exit-popup-box{border-radius:16px;}
+}
+</style>
+<link rel="canonical" href="https://surreyhomes.casa/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Surrey Dental Studio — Premium Dentistry in Dubai">
+<meta property="og:description" content="Dubai's premier dental clinic. DHA-licensed specialists for implants, whitening, Invisalign & more. Downtown Dubai, Jumeirah & Marina.">
+<meta property="og:url" content="https://surreyhomes.casa/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1200&q=80">
+<meta property="og:site_name" content="Surrey Dental Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Surrey Dental Studio — Premium Dentistry in Dubai">
+<meta name="twitter:description" content="Dubai's premier dental clinic. DHA-licensed specialists for implants, whitening, Invisalign & more. Downtown Dubai, Jumeirah & Marina.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1200&q=80">
+</head>
+<body>
+<!-- URGENCY BANNER -->
+<div class="urgency-banner" id="urgencyBanner">
+  <div class="urgency-inner">
+    <span class="urgency-pulse"></span>
+    <span>🎁 <strong>This Week Only:</strong> Free Consultation + Free X-Ray (Worth AED 350) — Limited slots!</span>
+    <a href="contact-us.html" class="urgency-cta">Claim Now →</a>
+    <button class="urgency-close" onclick="document.getElementById('urgencyBanner').style.display='none'">✕</button>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="nav">
+  <a href="index.html" class="logo">
+    <div class="logo-mark">✦</div>
+    Surrey Dental
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="service.html">Services</a></li>
+    <li><a href="dentist-downtown-dubai.html">Areas</a></li>
+    <li><a href="blogs.html">Blog</a></li>
+    <li><a href="contact-us.html">Contact</a></li>
+  </ul>
+  <a href="contact-us.html" class="nav-cta">Book Appointment →</a>
+  <button class="mobile-toggle">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Dubai · UAE Licensed · DHA Certified</div>
+      <h1>
+        <span class="word">Because</span>
+        <span class="word">every</span>
+        <span class="word"><em>smile</em></span>
+        <span class="word">matters</span>
+      </h1>
+      <p class="hero-sub">Your smile is more than just an expression — it's a reflection of your confidence, health, and happiness. Crafted by Dubai's most trusted dental specialists.</p>
+      <div class="hero-ctas">
+        <a href="contact-us.html" class="btn-primary">
+          Book your appointment
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="service.html" class="btn-ghost">Explore services</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value">100%</div>
+          <div class="hero-stat-label">Satisfaction</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">4.98</div>
+          <div class="hero-stat-label">Google rating</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">15K+</div>
+          <div class="hero-stat-label">Happy patients</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-rotating">
+      <img class="active" src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=80" alt="Confident smile after cosmetic dentistry">
+      <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=900&q=80" alt="Modern dental clinic interior">
+      <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=900&q=80" alt="Invisalign treatment Dubai">
+      <div class="hero-badges">
+        <div class="hero-badge">
+          <div class="hero-badge-value">20+</div>
+          <div class="hero-badge-label">Years Experience</div>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-value">DHA</div>
+          <div class="hero-badge-label">Licensed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><span>⭐</span><span><strong>4.98/5</strong> Google Rating</span></div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span>✅</span><span><strong>DHA Licensed</strong></span></div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span>👥</span><span><strong>15,000+</strong> Patients</span></div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span>🕐</span><span><strong>Same Day</strong> Appointments</span></div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span>💳</span><span><strong>0%</strong> Payment Plans</span></div>
+  </div>
+</div>
+<!-- REVIEWS TICKER -->
+<div class="reviews-ticker">
+  <div class="reviews-track">
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Best dentist in Dubai Marina!" — Sara K.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Painless implant, amazing results" — Ahmed R.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Finally found a dentist I trust" — Priya S.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Same day appointment, very professional" — James T.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "My whole family comes here now" — Fatima A.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Zoom whitening — 8 shades lighter!" — Maria L.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "DHA certified, very trustworthy" — Omar H.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Best implant specialist in Downtown" — Rana M.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Best dentist in Dubai Marina!" — Sara K.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Painless implant, amazing results" — Ahmed R.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Finally found a dentist I trust" — Priya S.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Same day appointment, very professional" — James T.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "My whole family comes here now" — Fatima A.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Zoom whitening — 8 shades lighter!" — Maria L.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "DHA certified, very trustworthy" — Omar H.</div>
+    <div class="review-chip">⭐⭐⭐⭐⭐ "Best implant specialist in Downtown" — Rana M.</div>
+  </div>
+</div>
+
+<!-- TAGLINE -->
+<section class="tagline-section">
+  <p class="tagline-text">"Excellence is a process, not a destination"</p>
+  <div class="tagline-sub">Award-winning specialist orthodontists in Dubai</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services-section" id="services">
+  <div class="section-header-row reveal">
+    <div>
+      <div class="section-eyebrow">Services</div>
+      <h2 class="section-title">Explore the full range of <em>dental treatment</em></h2>
+    </div>
+    <a href="service.html" class="btn-ghost">View All Services →</a>
+  </div>
+
+  <div class="services-grid reveal">
+    <a href="service/dental-implants.html" class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=600&q=80" alt="Dental Implants Dubai">
+      </div>
+      <div class="service-body">
+        <h3 class="service-name">Dental Implants</h3>
+        <span class="service-price">From AED 3,500</span>
+      </div>
+    </a>
+    <a href="service/pediatric-dentistry.html" class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80" alt="Pediatric Dentistry Dubai">
+      </div>
+      <div class="service-body">
+        <h3 class="service-name">Pediatric Dentistry</h3>
+        <span class="service-price">From AED 250</span>
+      </div>
+    </a>
+    <a href="service/root-canal.html" class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80" alt="Root Canal Dubai">
+      </div>
+      <div class="service-body">
+        <h3 class="service-name">Root Canal Therapy</h3>
+        <span class="service-price">From AED 1,200</span>
+      </div>
+    </a>
+    <a href="service/teeth-cleaning.html" class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=600&q=80" alt="Teeth Cleaning Dubai">
+      </div>
+      <div class="service-body">
+        <h3 class="service-name">Teeth Cleaning</h3>
+        <span class="service-price">From AED 400</span>
+      </div>
+    </a>
+    <a href="service/teeth-whitening.html" class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&q=80" alt="Teeth Whitening Dubai">
+      </div>
+      <div class="service-body">
+        <h3 class="service-name">Teeth Whitening</h3>
+        <span class="service-price">From AED 900</span>
+      </div>
+    </a>
+    <a href="service/invisalign.html" class="service-card">
+      <div class="service-img">
+        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=80" alt="Invisalign Dubai">
+      </div>
+      <div class="service-body">
+        <h3 class="service-name">Invisalign Aligners</h3>
+        <span class="service-price">From AED 12,000</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about-section">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">About The Practice</div>
+    <h2 class="section-title">Our practice has been recently refurbished with cutting-edge equipment in a refreshed and <em>contemporary space</em>. The practice has been transformed but retains its friendly, family-focused and professional service.</h2>
+  </div>
+
+  <div class="about-grid reveal">
+    <div class="about-block">
+      <div class="about-block-img">
+        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&q=80" alt="Modern dental consultation">
+      </div>
+      <div class="about-block-body">
+        <div class="about-block-tag">400+ Successful Consultations Monthly</div>
+        <h3 class="about-block-title">24/7 Dentist Availability</h3>
+        <p class="about-block-text">For years, patients have placed their trust in us for compassionate care and lasting results. We're proud to be the dental home for families across the UAE who value comfort and honesty.</p>
+      </div>
+    </div>
+    <div class="about-block">
+      <div class="about-block-img">
+        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=900&q=80" alt="Dental consultation">
+      </div>
+      <div class="about-block-body">
+        <div class="about-block-tag">4.9/5 User Satisfaction Rating</div>
+        <h3 class="about-block-title">5000+ Positive Testimonials</h3>
+        <p class="about-block-text">We're more than a dental clinic — we're partners in your smile journey. Our patients in Dubai trust us because we listen, we care, and we deliver results that last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE OFFER -->
+<section class="offer-section">
+  <div class="offer-grid reveal">
+    <div>
+      <div class="section-eyebrow">What We Offer</div>
+      <h2 class="section-title">We offer more than just dental services — <em>care for your smile</em></h2>
+      <div class="offer-features">
+        <div class="offer-feature">
+          <p>For years, patients have placed their trust in us for compassionate care and lasting results across Dubai and the wider UAE.</p>
+        </div>
+        <div class="offer-feature">
+          <p>We're more than a dental clinic — we're partners in your smile journey. Our clients trust us because we listen, we care, and we deliver results that last.</p>
+        </div>
+        <div class="offer-feature">
+          <p>The practice has been transformed but it retains its friendly, family-focused and professional service.</p>
+        </div>
+      </div>
+      <a href="contact-us.html" class="btn-primary" style="background: var(--bg); color: var(--sage);">
+        Book your appointment
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+    <div class="offer-image">
+      <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=900&q=80" alt="Modern dental office">
+      <div class="offer-stack">
+        <div class="offer-stack-item">Medication</div>
+        <div class="offer-stack-item">Supervision</div>
+        <div class="offer-stack-item">Hygiene</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="section doctors-section">
+  <div class="section-header-row reveal">
+    <div>
+      <div class="section-eyebrow">Team</div>
+      <h2 class="section-title">Your care begins with the <em>right people</em></h2>
+    </div>
+    <a href="contact-us.html" class="btn-primary">Book your appointment →</a>
+  </div>
+
+  <div class="doctors-grid reveal">
+    <a href="doctor/dr-amira-al-hashmi.html" class="doctor-card">
+      <div class="doctor-img">
+        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80" alt="Dr. Amira Al-Hashmi">
+        <div class="doctor-experience">20+ years of experience</div>
+      </div>
+      <div class="doctor-body">
+        <h3 class="doctor-name">Dr. Amira Al-Hashmi</h3>
+        <p class="doctor-role">Founder & Chief Implantologist</p>
+      </div>
+    </a>
+    <a href="doctor/dr-khalid-rahman.html" class="doctor-card">
+      <div class="doctor-img">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Dr. Khalid Rahman">
+        <div class="doctor-experience">15+ years of experience</div>
+      </div>
+      <div class="doctor-body">
+        <h3 class="doctor-name">Dr. Khalid Rahman</h3>
+        <p class="doctor-role">Chief Dental Surgeon</p>
+      </div>
+    </a>
+    <a href="doctor/dr-sophia-laurent.html" class="doctor-card">
+      <div class="doctor-img">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Dr. Sophia Laurent">
+        <div class="doctor-experience">18+ years of experience</div>
+      </div>
+      <div class="doctor-body">
+        <h3 class="doctor-name">Dr. Sophia Laurent</h3>
+        <p class="doctor-role">Consultant Orthodontist</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials-section">
+  <div class="section-header-center reveal">
+    <div class="section-eyebrow">Testimonials</div>
+    <h2 class="section-title">Celebrating smiles, one <em>transformation at a time</em></h2>
+  </div>
+
+  <div class="testimonials-wrap reveal">
+    <div class="testimonial">
+      <p class="testimonial-quote">"The team made my entire dental visit smooth and stress-free. I finally feel confident about my smile again."</p>
+      <div class="testimonial-person">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, var(--sage), var(--gold)); display:flex; align-items:center; justify-content:center; color:var(--bg); font-family:var(--serif); font-size:20px;">FA</div>
+        <div>
+          <div class="testimonial-name">Fatima Al-Mansoori</div>
+          <div class="testimonial-role">Downtown Dubai</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">"Everyone was incredibly welcoming, and the treatment was quick and comfortable. I've never felt this relaxed at a dentist before."</p>
+      <div class="testimonial-person">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, var(--terracotta), var(--sage)); display:flex; align-items:center; justify-content:center; color:var(--bg); font-family:var(--serif); font-size:20px;">JR</div>
+        <div>
+          <div class="testimonial-name">James Robertson</div>
+          <div class="testimonial-role">Dubai Marina</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">"They explained every step with patience and care, and the results were better than I expected. Truly a trustworthy clinic."</p>
+      <div class="testimonial-person">
+        <div class="testimonial-avatar" style="background: linear-gradient(135deg, var(--gold), var(--terracotta)); display:flex; align-items:center; justify-content:center; color:var(--bg); font-family:var(--serif); font-size:20px;">PS</div>
+        <div>
+          <div class="testimonial-name">Priya Sharma</div>
+          <div class="testimonial-role">Jumeirah</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-inner">
+    <span>Comprehensive Dental Support</span><span class="dot">/</span>
+    <span>Comprehensive Dental Support</span><span class="dot">/</span>
+    <span>Comprehensive Dental Support</span><span class="dot">/</span>
+    <span>Comprehensive Dental Support</span><span class="dot">/</span>
+    <span>Comprehensive Dental Support</span><span class="dot">/</span>
+    <span>Comprehensive Dental Support</span><span class="dot">/</span>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+  <div class="benefits-grid reveal">
+    <div class="benefits-image">
+      <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&q=80" alt="Smiling patient after treatment">
+    </div>
+    <div class="benefits-text">
+      <div class="section-eyebrow">Benefits</div>
+      <h2 class="section-title">Your well-being comes first, <em>always</em></h2>
+      <p>With Surrey Dental Studio, you gain more than just a dental solution — you receive complete wellness support tailored to your needs. Our personalised care connects you with qualified specialists who take the time to understand your health journey and prescribe the right treatments for you.</p>
+      <p>From expert guidance to carefully managed treatment plans, we make the process simple and reliable across our Downtown Dubai, Jumeirah and Dubai Marina clinics.</p>
+      <a href="contact-us.html" class="btn-primary">
+        Book your appointment
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section blog-section">
+  <div class="section-header-row reveal">
+    <div>
+      <div class="section-eyebrow">Our Blog</div>
+      <h2 class="section-title">Trusted knowledge from <em>professionals</em></h2>
+    </div>
+    <a href="blogs.html" class="btn-ghost">View all articles →</a>
+  </div>
+
+  <div class="blog-grid reveal">
+    <a href="blog/connection-between-low-mood.html" class="blog-card">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80" alt="Blog post">
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-category">Dental</span>
+          <span>December 1, 2025</span>
+        </div>
+        <h3 class="blog-title">The surprising connection between low mood and oral health</h3>
+      </div>
+    </a>
+    <a href="blog/vegan-food-oral-health.html" class="blog-card">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1578496480157-697fc14d2e55?w=600&q=80" alt="Blog post">
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-category">Nutrition</span>
+          <span>November 28, 2025</span>
+        </div>
+        <h3 class="blog-title">Nourishing smiles: the intersection of vegan food and oral health</h3>
+      </div>
+    </a>
+    <a href="blog/dental-insight-tips.html" class="blog-card">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?w=600&q=80" alt="Blog post">
+      </div>
+      <div class="blog-body">
+        <div class="blog-meta">
+          <span class="blog-category">Tips</span>
+          <span>November 20, 2025</span>
+        </div>
+        <h3 class="blog-title">Get dental insights, medical tips, and more for your family</h3>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- AREAS SECTION -->
+<section class="section" style="background:var(--bg-cream);padding:100px 48px;">
+  <div class="section-header-center reveal" style="max-width:1400px;margin:0 auto 60px;">
+    <div class="section-eyebrow">We Serve All Dubai</div>
+    <h2 class="section-title">Find a dentist in <em>your area</em></h2>
+    <p style="font-size:16px;color:var(--ink-soft);margin-top:16px;line-height:1.6;">Click your neighbourhood to find local dental services, pricing, and book appointments near you.</p>
+  </div>
+
+  <div style="max-width:1400px;margin:0 auto;">
+
+    <!-- TOP AREAS (big cards) -->
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:40px;" class="reveal">
+      <a href="dentist-downtown-dubai.html" style="display:flex;flex-direction:column;gap:6px;padding:22px 18px;background:var(--bg-white);border-radius:18px;border:1.5px solid var(--line);transition:all 0.3s;text-align:center;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)';this.style.transform='none'">
+        <span style="font-size:22px;">🏙️</span>
+        <span style="font-family:var(--serif);font-size:16px;font-weight:500;">Downtown Dubai</span>
+        <span style="font-size:11px;color:var(--ink-mute);">Burj Khalifa area</span>
+      </a>
+      <a href="dentist-dubai-marina.html" style="display:flex;flex-direction:column;gap:6px;padding:22px 18px;background:var(--bg-white);border-radius:18px;border:1.5px solid var(--line);transition:all 0.3s;text-align:center;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)';this.style.transform='none'">
+        <span style="font-size:22px;">⛵</span>
+        <span style="font-family:var(--serif);font-size:16px;font-weight:500;">Dubai Marina</span>
+        <span style="font-size:11px;color:var(--ink-mute);">Marina Walk area</span>
+      </a>
+      <a href="dentist-jumeirah.html" style="display:flex;flex-direction:column;gap:6px;padding:22px 18px;background:var(--bg-white);border-radius:18px;border:1.5px solid var(--line);transition:all 0.3s;text-align:center;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)';this.style.transform='none'">
+        <span style="font-size:22px;">🏖️</span>
+        <span style="font-family:var(--serif);font-size:16px;font-weight:500;">Jumeirah</span>
+        <span style="font-size:11px;color:var(--ink-mute);">Beach Road area</span>
+      </a>
+      <a href="dentist-business-bay.html" style="display:flex;flex-direction:column;gap:6px;padding:22px 18px;background:var(--bg-white);border-radius:18px;border:1.5px solid var(--line);transition:all 0.3s;text-align:center;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)';this.style.transform='none'">
+        <span style="font-size:22px;">🏢</span>
+        <span style="font-family:var(--serif);font-size:16px;font-weight:500;">Business Bay</span>
+        <span style="font-size:11px;color:var(--ink-mute);">Canal district</span>
+      </a>
+      <a href="dentist-palm-jumeirah.html" style="display:flex;flex-direction:column;gap:6px;padding:22px 18px;background:var(--bg-white);border-radius:18px;border:1.5px solid var(--line);transition:all 0.3s;text-align:center;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)';this.style.transform='none'">
+        <span style="font-size:22px;">🌴</span>
+        <span style="font-family:var(--serif);font-size:16px;font-weight:500;">Palm Jumeirah</span>
+        <span style="font-size:11px;color:var(--ink-mute);">Island living</span>
+      </a>
+    </div>
+
+    <!-- ALL AREAS PILLS -->
+    <div style="display:flex;flex-wrap:wrap;gap:10px;" class="reveal">
+      <a href="dentist-jlt.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">JLT</a>
+      <a href="dentist-jbr.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">JBR</a>
+      <a href="dentist-difc.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">DIFC</a>
+      <a href="dentist-deira.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Deira</a>
+      <a href="dentist-bur-dubai.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Bur Dubai</a>
+      <a href="dentist-al-barsha.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Al Barsha</a>
+      <a href="dentist-mirdif.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Mirdif</a>
+      <a href="dentist-al-nahda.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Al Nahda</a>
+      <a href="dentist-karama.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Karama</a>
+      <a href="dentist-dubai-hills.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Dubai Hills</a>
+      <a href="dentist-arabian-ranches.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Arabian Ranches</a>
+      <a href="dentist-jvc.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">JVC</a>
+      <a href="dentist-discovery-gardens.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Discovery Gardens</a>
+      <a href="dentist-the-meadows.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">The Meadows</a>
+      <a href="dentist-the-springs.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">The Springs</a>
+      <a href="dentist-motor-city.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Motor City</a>
+      <a href="dentist-sports-city.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Sports City</a>
+      <a href="dentist-silicon-oasis.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Silicon Oasis</a>
+      <a href="dentist-festival-city.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Festival City</a>
+      <a href="dentist-creek-harbour.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Creek Harbour</a>
+      <a href="dentist-mbr-city.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">MBR City</a>
+      <a href="dentist-satwa.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Al Satwa</a>
+      <a href="dentist-umm-suqeim.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Umm Suqeim</a>
+      <a href="dentist-al-quoz.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Al Quoz</a>
+      <a href="dentist-tecom.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">TECOM</a>
+      <a href="dentist-media-city.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Media City</a>
+      <a href="dentist-dubai-south.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Dubai South</a>
+      <a href="dentist-jebel-ali.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Jebel Ali</a>
+      <a href="dentist-al-furjan.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Al Furjan</a>
+      <a href="dentist-international-city.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">International City</a>
+      <a href="dentist-mudon.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Mudon</a>
+      <a href="dentist-damac-hills.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">DAMAC Hills</a>
+      <a href="dentist-town-square.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Town Square</a>
+      <a href="dentist-villanova.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Villanova</a>
+      <a href="dentist-serena.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Serena</a>
+      <a href="dentist-sustainable-city.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Sustainable City</a>
+      <a href="dentist-emirates-hills.html" style="padding:10px 18px;background:var(--bg-white);border:1px solid var(--line);border-radius:100px;font-size:13px;transition:all 0.25s;" onmouseover="this.style.background='var(--sage)';this.style.color='white';this.style.borderColor='var(--sage)'" onmouseout="this.style.background='var(--bg-white)';this.style.color='var(--ink)';this.style.borderColor='var(--line)'">Emirates Hills</a>
+    </div>
+
+    <!-- VIEW ALL BUTTON -->
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a href="dentist-downtown-dubai.html" class="btn-ghost">View All 80+ Areas →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<!-- GHL BOOKING FORM -->
+<section style="padding:72px 48px;background:var(--bg-cream, #ede6d9);">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start;">
+    <div>
+      <p style="font-size:11px;text-transform:uppercase;letter-spacing:0.2em;color:var(--sage,#3d4a3c);font-weight:500;margin-bottom:14px;">Book Appointment</p>
+      <h2 style="font-family:Georgia,serif;font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.1;margin-bottom:20px;color:var(--ink,#1a1a1a);">Request your <em style="color:var(--sage,#3d4a3c);">appointment</em></h2>
+      <p style="font-size:15px;color:var(--soft,#4a4948);line-height:1.7;margin-bottom:28px;">Fill the form and our team confirms your booking within 15 minutes. Same-day slots available across Downtown Dubai, Jumeirah &amp; Dubai Marina.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <a href="tel:+97145550000" style="display:flex;gap:14px;padding:16px 18px;background:white;border-radius:14px;align-items:center;text-decoration:none;transition:transform 0.3s;" onmouseover="this.style.transform='translateX(6px)'" onmouseout="this.style.transform='none'">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--sage,#3d4a3c);color:white;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">📞</div>
+          <div><div style="font-size:10px;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:2px;">Call Us</div><div style="font-size:14px;font-weight:500;color:var(--ink,#1a1a1a);">+971 4 555 0000</div></div>
+        </a>
+        <a href="https://wa.me/971505550000" target="_blank" style="display:flex;gap:14px;padding:16px 18px;background:white;border-radius:14px;align-items:center;text-decoration:none;transition:transform 0.3s;" onmouseover="this.style.transform='translateX(6px)'" onmouseout="this.style.transform='none'">
+          <div style="width:40px;height:40px;border-radius:50%;background:#25D366;color:white;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">💬</div>
+          <div><div style="font-size:10px;color:#888;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:2px;">WhatsApp</div><div style="font-size:14px;font-weight:500;color:var(--ink,#1a1a1a);">+971 50 555 0000</div></div>
+        </a>
+        <div style="padding:16px 18px;background:white;border-radius:14px;border-left:3px solid var(--sage,#3d4a3c);">
+          <div style="font-size:11px;color:var(--sage,#3d4a3c);font-weight:500;margin-bottom:4px;">⏰ Hours</div>
+          <div style="font-size:13px;color:var(--soft,#4a4948);">Sat–Thu: 9AM–9PM &nbsp;|&nbsp; Fri: 2PM–9PM</div>
+        </div>
+      </div>
+    </div>
+    <div style="background:white;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px -20px rgba(0,0,0,0.1);">
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/K88iOUIXmZRkyY6yJb8v"
+        style="width:100%;height:620px;border:none;"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-activation-type="alwaysActivated"
+        data-deactivation-type="neverDeactivate"
+        data-form-name="Appointment Booking"
+        data-height="610"
+        data-form-id="K88iOUIXmZRkyY6yJb8v"
+        title="Book Dental Appointment">
+      </iframe>
+      <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:768px){
+  section[style*="grid-template-columns:1fr 1.2fr"]{
+    grid-template-columns:1fr !important;
+    padding:48px 20px !important;
+  }
+}
+</style>
+<!-- END GHL BOOKING FORM -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <div class="logo-mark">✦</div>
+        Surrey Dental
+      </a>
+      <p class="footer-tagline">Bringing out the <em>best</em> in your smile</p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" aria-label="Instagram">IG</a>
+        <a href="#" class="footer-social" aria-label="Facebook">FB</a>
+        <a href="#" class="footer-social" aria-label="TikTok">TT</a>
+        <a href="#" class="footer-social" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Main Pages</h4>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Popular Areas</h4>
+      <ul>
+        <li><a href="dentist-downtown-dubai.html">Downtown Dubai</a></li>
+        <li><a href="dentist-dubai-marina.html">Dubai Marina</a></li>
+        <li><a href="dentist-jumeirah.html">Jumeirah</a></li>
+        <li><a href="dentist-jlt.html">JLT</a></li>
+        <li><a href="dentist-business-bay.html">Business Bay</a></li>
+        <li><a href="dentist-palm-jumeirah.html">Palm Jumeirah</a></li>
+        <li><a href="dentist-al-barsha.html">Al Barsha</a></li>
+        <li><a href="dentist-deira.html">Deira</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Other</h4>
+      <ul>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="career/open-solicitation.html">Careers</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="404.html">Help</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+97145550000">+971 4 555 0000</a></li>
+        <li><a href="mailto:hello@surreydental.ae">hello@surreydental.ae</a></li>
+        <li><a href="https://wa.me/971505550000">WhatsApp</a></li>
+        <li>Downtown Dubai, UAE</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Surrey Dental Studio. DHA License #SDS-2008-DXB</span>
+    <span>Privacy · Terms · Sitemap</span>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/971505550000" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+</div>
+<!-- STICKY MOBILE BAR -->
+<div class="sticky-bar">
+  <a href="tel:+97145550000" class="sticky-call">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Call Now
+  </a>
+  <a href="https://wa.me/971505550000" target="_blank" class="sticky-wa">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    WhatsApp
+  </a>
+  <a href="contact-us.html" class="sticky-book">📅 Book Free</a>
+</div>
+<script>
+// Scroll progress bar
+(function(){
+  var pb = document.createElement('div');
+  pb.style.cssText = 'position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:9999;transition:width .1s;width:0%;pointer-events:none;';
+  document.body.prepend(pb);
+  window.addEventListener('scroll', function(){
+    var pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    pb.style.width = Math.min(pct, 100) + '%';
+  });
+})();
+
+// Exit intent
+(function(){
+  var shown = false;
+  function show(){
+    if(shown) return;
+    shown = true;
+    var p = document.getElementById('exitPopup');
+    if(p) p.classList.add('show');
+  }
+  document.addEventListener('mouseleave', function(e){ if(e.clientY < 20) show(); });
+  setTimeout(function(){ if(window.innerWidth < 768) show(); }, 30000);
+  document.addEventListener('click', function(e){
+    var p = document.getElementById('exitPopup');
+    if(p && e.target === p) p.classList.remove('show');
+  });
+})();
+</script>
+</body>
+</html>
