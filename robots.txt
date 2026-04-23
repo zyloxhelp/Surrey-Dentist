@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://surreyhomes.casa/sitemap.xml
+
+# Disallow junk files
+Disallow: /contact-us-GHL.html
+Disallow: /contact-us-GHL-final.html
+Disallow: /index-with-areas.html
